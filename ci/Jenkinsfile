@@ -9,6 +9,7 @@ environment {
     stages {
         stage('stage one') {
             steps {
+                sh "cat .env"
                       configFileProvider(
         [configFile(fileId: 'ab3f322a-2589-4d3d-b849-6b8052a11247',variable: 'envPath')]) {
    echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
