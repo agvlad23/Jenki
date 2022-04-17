@@ -3,7 +3,7 @@ pipeline {
 environment {
     someVar="${env.envTest}"
     someVar2="${env.envTest2}"
-    someVa3r="${env.envTest3}"
+    someVar3="${env.envTest3}"
 }
     stages {
         stage('stage one') {
