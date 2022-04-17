@@ -13,7 +13,7 @@ environment {
         [configFile(fileId: 'ab3f322a-2589-4d3d-b849-6b8052a11247',variable: 'envTest')]) {
    echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
             sh "cat ${env.envTest}"
-            sh "rm .env"
+            
                           sh "cp ${env.Test} .env" 
             echo " =========== ~~~~~~~~~~~~ ============ "
     }
