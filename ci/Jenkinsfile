@@ -13,6 +13,8 @@ environment {
         [configFile(fileId: 'ab3f322a-2589-4d3d-b849-6b8052a11247',variable: 'envTest')]) {
    echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
             sh "cat ${env.envTest}"
+            sh "rm .env"
+                          sh "cp ${env.Test} .env" 
             echo " =========== ~~~~~~~~~~~~ ============ "
     }
                 echo someVar
@@ -20,7 +22,9 @@ environment {
         }
         stage('stage two') {
             steps {
-                echo someVar2
+                
+                echo "${env.envTest2}"
+                sh "cat .env"
                 echo someVar3
             }
         }
