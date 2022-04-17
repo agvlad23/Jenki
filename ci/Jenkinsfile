@@ -10,9 +10,10 @@ environment {
         stage('stage one') {
             steps {
                       configFileProvider(
-        [configFile(fileId: 'ab3f322a-2589-4d3d-b849-6b8052a11247')]) {
-                          echo "${env.envTest}"
-                         echo "${env.envTest2}"
+        [configFile(fileId: 'ab3f322a-2589-4d3d-b849-6b8052a11247',variable: 'envTest'))]) {
+   echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
+            sh "cat ${env.envTest}"
+            echo " =========== ~~~~~~~~~~~~ ============ "
     }
                 echo someVar
             }
