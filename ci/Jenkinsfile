@@ -1,6 +1,12 @@
 pipeline {
     agent any
+    
 environment {
+      configFileProvider(
+        [configFile(fileId: 'ab3f322a-2589-4d3d-b849-6b8052a11247')]) {
+         echo envTest
+          echo "${env.envTest}"
+    }
     someVar="${env.envTest}"
     someVar2 = "${env.envTest2}"
     someVar3="${env.envTest3}"
