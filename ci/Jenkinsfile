@@ -13,8 +13,6 @@ environment {
         [configFile(fileId: 'ab3f322a-2589-4d3d-b849-6b8052a11247')]) {
                           echo "${env.envTest}"
                          echo "${env.envTest2}"
-         echo envTest
-          echo envTest2
     }
                 echo someVar
             }
