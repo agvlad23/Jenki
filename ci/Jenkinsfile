@@ -10,7 +10,7 @@ environment {
         stage('stage one') {
             steps {
                       configFileProvider(
-        [configFile(fileId: 'ab3f322a-2589-4d3d-b849-6b8052a11247')]) {
+        [configFile(fileId: 'ab3f322a-2589-4d3d-b849-6b8052a11247',variable:'envTest')]) {
          echo envTest
           echo "${env.envTest}"
     }
